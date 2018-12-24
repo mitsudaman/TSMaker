@@ -156,6 +156,13 @@ https://ohbarye.hatenablog.jp/entry/2018/07/08/161018
     publish = "front/dist"
     command = "npm run generate"
 
+<まとめ>
+(1)静的化する
+  /TSMaker/front # yarn generate:gh-pages
+(2)サブツリーだけpush(ローカルから)
+  git subtree push --prefix front/dist/ origin gh-pages
+
+
 
 --------------------------------------------
 <todo>

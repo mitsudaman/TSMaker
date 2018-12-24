@@ -132,7 +132,7 @@
       <div class="px-3">
         <a
           data-size="large"
-          href="https://twitter.com/share?text=時間割メーカー。簡単に1日のスケジュールを立てられるサービスです。朝に使うとより幸せになれます。&hashtags=時間割メーカー&url=https://mitsudaman.github.io/vue-trial/TimeSchedule/"
+          href="https://twitter.com/share?text=時間割メーカー。簡単に1日のスケジュールを立てられるサービスです。朝に使うとより幸せになれます。&hashtags=時間割メーカー&url=https://mitsudaman.github.io/TSMaker/"
           title="Twitter"
           class="twitter-share-button"
           data-show-count="false"

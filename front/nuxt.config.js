@@ -17,7 +17,7 @@ module.exports = {
       { property: 'og:description', content: '予定を立てて時間割を作ろう！' },
       { property: 'og:url', content: 'https://mitsudaman.github.io/vue-trial/TimeSchedule/' },
       { property: 'og:site_name', content: '時間割メーカー' },
-      { property: 'og:image', content: 'https://github.com/mitsudaman/TSMaker/blob/master/front/assets/img/time_schedule.png' },
+      { property: 'og:image', content: '~/assets/img/mitsudama.png' },
     ],
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
