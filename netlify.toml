@@ -1,0 +1,4 @@
+[build]
+  base    = "front"
+  publish = "front/dist"
+  command = "npm run generate"

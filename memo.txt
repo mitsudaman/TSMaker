@@ -1,0 +1,254 @@
+■設定
+docker-compose build
+docker-compose up -d
+docker-compose exec nuxt sh
+
+docker-compose run nuxt sh
+
+/TSMaker vue init nuxt-community/starter-template front
+
+    ? Project name front
+    ? Project description Nuxt.js project
+    ? Author mitsudama
+
+    vue-cli · Generated "front".
+
+    To get started:
+    
+        cd front
+        npm install # Or yarn
+        npm run dev
+
+/TSMaker # cd front
+/TSMaker/front # yarn install
+    yarn install v1.10.1
+    info No lockfile found.
+    [1/4] Resolving packages...
+    warning eslint > file-entry-cache > flat-cache > circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+
+
+/TSMaker/front # yarn dev
+
+
+
+
+
+--------------------------------------------
+■bootstrap 導入yarn add bootstrap-vue
+# With NPM:
+npm i bootstrap-vue
+
+# With Yarn:
+yarn add bootstrap-vue
+Add bootstrap-vue/nuxt to modules section of nuxt.config.js
+
+{
+  modules: [
+    'bootstrap-vue/nuxt',
+
+    // Or if you have custom bootstrap CSS...
+    ['bootstrap-vue/nuxt', { css: false }],
+  ]
+}
+
+
+-----------------------------------------------------------------
+■vue-chart.js (Getting Started)
+https://vue-chartjs.org/guide/#introduction
+
+◾label 用プラグイン
+https://github.com/emn178/chartjs-plugin-labels
+
+※このcodeのsettingを参考に
+https://codepen.io/kasiditp/pen/jwBqBZ
+
+
+
+-----------------------------------------------------------------
+<docker>
+■image 全削除
+docker images -aq | xargs docker rmi
+
+
+
+--------------------------------------------
+■ git 
+git config --local user.name [name]
+git config --local user.email [email]
+
+
+▼Git の Commit Author と Commiter を変更する
+https://qiita.com/sea_mountain/items/d70216a5bc16a88ed932
+
+git filter-branch -f --env-filter "GIT_AUTHOR_NAME=''; GIT_AUTHOR_EMAIL=''; GIT_COMMITTER_NAME=''; GIT_COMMITTER_EMAIL='';" HEAD 
+
+
+
+
+--------------------------------------------
+▼GitHub Pages へデプロイするには？
+https://ja.nuxtjs.org/faq/github-pages/
+
+/* package.json */
+
+  "scripts": {
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+  },
+
+
+"scripts": {
+  "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+  "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
+},
+
+https://mitsudaman.github.io/vue-trial/ 
+
+
+
+(1)上を参考にdistファイルをgenerateする
+
+
+(2)dockerfileなどが入っている大元のリポジトリ<vue-trial>をアップしてみる
+→githubpages も Netlfyも動作せず
+　
+  <Netlify>
+  1.ブランチをデプロイする： master もしくはデプロイしたいブランチ
+  2.ビルドコマンド： npm run generate
+  3.公開ディテクトリ： dist
+  ↑これしてもダメ
+
+(3)vue-trial配下のfrontディレクトリをアップしてみる
+→git hub pages は動作しない　が！
+　Netlifyは無事動くことに成功！！！
+
+もしや
+「プロジェクトリポジトリであれば gh-pages ブランチ、ユーザーや組織のサイトであれば master ブランチにデプロイしてください 。」
+ってdistフォルダだけアップすればいい感じ？
+
+(4)dist 配下のみアップされたブランチを作成
+
+▼Nuxt.js を GitHub Pages で使う
+https://fiahfy.blogspot.com/2017/12/nuxtjs-github-pages.html
+
+  $ cd gh-pages
+  $ git init ←これも必要
+  $ git remote add origin https://github.com/mitsudaman/vue-trial.git
+  $ git checkout -b gh-pages
+  $ git add .
+  $ git commit -m "Initial commit"
+  $ git push -u origin gh-pages
+
+git remote set-url origin https://github.com/mitsudaman/vue-trial.git
+git remote add origin https://github.com/mitsudaman/vue-trial.git
+
+＊もっといいの発見!!!
+git subtree push --prefix front/dist/ origin gh-pages
+
+(5)netlifyでも大元のリポジトリをあげるだけにしたい(サブディレクトリをデプロイしたい)
+
+▼monorepo 構成の Git repository の sub directory を Netlify にデプロイする
+https://ohbarye.hatenablog.jp/entry/2018/07/08/161018
+
+<netlify.toml>
+  [build]
+    base    = "front"
+    publish = "front/dist"
+    command = "npm run generate"
+
+
+--------------------------------------------
+<todo>
+* 画像ダウンロード機能
+* カラー設定機能
+* カラー色彩調整
+ ▼素人でもプロ並みの配色ができるデザインパターン参考サイト21選
+ https://blog.codecamp.jp/color_pattern
+
+ ▼American　Palette
+ https://flatuicolors.com/palette/us
+ 
+* 削除ボタン
+▼ボタンに使うべき色とは？CTAと配色の関係について、ポイントを解説！
+https://www.seleqt.net/design/how-button-color-contrast-guides-users-to-action/
+
+* チェック処理(9以上は崩れるのでNG、toをfromが越えるとダメとか)
+→NOを表示しない方向で対応
+
+* デザイン調整（レスポンシブ）
+→ no-gutters を使用　細かい調整すみ
+
+*ラベルをタイトル部分は削除してグラフ中に表示
+* スマホ版二重に記載されてしまう件
+→safariだとb-form-inputがうまく動かないためinputタグで回避
+
+*スマホ版ダウンロードできない件
+→ios safariでは仕様。
+
+*グラフの背景色が透過されてしまい真っ黒になる
+→git hubのコードパクリで対応
+
+▼Canvas background color
+https://github.com/chartjs/Chart.js/issues/2830
+ 
+
+* favicon設定
+
+▼ファビコンを設定してみた。10分ほどで出来て超カンタン。
+https://sayakablog.com/blog/favicon/
+
+▼ファビコン favicon.icoを作ろう!
+https://ao-system.net/favicon/
+
+
+* ツイート機能
+▼公式
+https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers
+
+▼FontAwesomeをNuxt.jsで使う (npm経由)
+https://yinm.info/20181008/
+
+▼今の時代必ず知っておくべき！！Twitterツイートボタンの設置・実装方法まとめ
+http://blog.yuhiisk.com/archive/2015/10/12/twitter-share.html
+
+
+* タグ作成
+→名前だけ決めてあげれば無問題
+
+* ボタン部分の広がりCSS
+→ btn-blockで対応
+
+* 画像でかすぎ問題
+* ソースコード汚い問題
+
+* ヘッダー作成
+* はてブ
+
+*左外側のラベルが消えてしまう問題
+→タイトルを設定すれば回避できることに気づいた
+→そもそもpaddingも設定できることが判明
+
+*ヘッダー部分
+ - h1にしたい
+ - 銀色にしたい
+
+* lint 対応
+→制約がゆるいので
+essential → strongly-recommended
+に変更
+壊れるのが怖いので後ほどeslint用のコミットを別に作成
+
+▼Available rules
+https://vuejs.github.io/eslint-plugin-vue/rules/
+
+
+* OGP画像を登録（今回は不変で）
+▼Facebook・TwitterのOGP設定方法まとめ
+https://ferret-plus.com/610
+
+
+
+* DS_store 邪魔問題
+* READ.ME 私を読んでもうて　かく
+
+* google analytics設定

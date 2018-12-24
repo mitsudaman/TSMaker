@@ -1,0 +1,32 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "mitsudama",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "start": "nuxt start",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate && rm -rf gh-pages/* && cp -r dist/ gh-pages/",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "chart.js": "^2.7.3",
+    "chartjs-plugin-labels": "^1.1.0",
+    "nuxt": "^2.0.0",
+    "vue-chartjs": "^3.4.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}
