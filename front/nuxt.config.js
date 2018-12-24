@@ -1,17 +1,11 @@
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/vue-trial/'
+    base: '/TSMaker/'
   }
 } : {}
 
 module.exports = {
-  mode: 'spa',
-  // router: {
-  //   base: '/vue-trial/'
-  // },
-  /*
-  ** Headers of the page
-  */
+  // mode: 'spa',
   head: {
     title: '時間割メーカー',
     meta: [
