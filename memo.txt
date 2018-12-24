@@ -3,7 +3,7 @@ docker-compose build
 docker-compose up -d
 docker-compose exec nuxt sh
 
-docker-compose run nuxt sh
+//docker-compose run nuxt sh
 
 /TSMaker vue init nuxt-community/starter-template front
 
@@ -249,6 +249,6 @@ https://ferret-plus.com/610
 
 
 * DS_store 邪魔問題
-* READ.ME 私を読んでもうて　かく
+* READ.ME 私を読んでもうて　かく *front配下のは削除
 
 * google analytics設定
