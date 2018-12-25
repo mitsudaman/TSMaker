@@ -258,4 +258,8 @@ https://ferret-plus.com/610
 * DS_store 邪魔問題
 * READ.ME 私を読んでもうて　かく *front配下のは削除
 
+*view port 系
+*[Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content.
+
+
 * google analytics設定
