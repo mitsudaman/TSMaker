@@ -5,7 +5,8 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 } : {}
 
 module.exports = {
-  mode: 'spa',
+  // mode: 'spa',
+  ...routerBase,
   head: {
     title: '時間割メーカー',
     meta: [
@@ -23,7 +24,7 @@ module.exports = {
       prefix: 'og: http://ogp.me/ns#'
     },
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/TSMaker/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
@@ -57,6 +58,5 @@ module.exports = {
     // Or if you have custom bootstrap CSS...
     ['bootstrap-vue/nuxt', { css: false }],
   ],
-  ...routerBase
 }
 
