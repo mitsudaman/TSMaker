@@ -12,5 +12,5 @@ $ docker-compose exec nuxt sh
 # To get started:
     
         cd front
-        npm install # Or yarn
+        npm install # Or yarn install
         npm run dev # Or yarn dev
