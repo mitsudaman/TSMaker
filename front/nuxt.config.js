@@ -19,12 +19,14 @@ module.exports = {
       { property: 'og:url', content: 'https://mitsudaman.github.io/TSMaker/' },
       { property: 'og:site_name', content: '時間割メーカー' },
       { property: 'og:image', content: 'https://mitsudaman.github.io/TSMaker/OGP.png' },
+      { property: 'twitter:site', content: '@mitudama' },
+      { property: 'twitter:card', content: 'summary_large_image' },
     ],
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/TSMaker/favicon.ico' }
     ]
   },
   /*
