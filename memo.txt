@@ -159,7 +159,10 @@ https://ohbarye.hatenablog.jp/entry/2018/07/08/161018
 <まとめ>
 (1)静的化する
   /TSMaker/front # yarn generate:gh-pages
-(2)サブツリーだけpush(ローカルから)
+  
+(2)commit
+
+(3)サブツリーだけpush(ローカルから)
   git subtree push --prefix front/dist/ origin gh-pages
 
 
