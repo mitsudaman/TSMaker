@@ -16,9 +16,9 @@ module.exports = {
       { property: 'og:title', content: '時間割メーカー' },
       { property: 'og:type', content: 'website' },
       { property: 'og:description', content: '予定を立てて時間割を作ろう！' },
-      { property: 'og:url', content: 'https://mitsudaman.github.io/vue-trial/TimeSchedule/' },
+      { property: 'og:url', content: 'https://mitsudaman.github.io/TSMaker/' },
       { property: 'og:site_name', content: '時間割メーカー' },
-      { property: 'og:image', content: 'https://raw.githubusercontent.com/mitsudaman/TSMaker/master/front/assets/img/time_schedule.png' },
+      { property: 'og:image', content: 'https://mitsudaman.github.io/TSMaker/OGP.png' },
     ],
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
