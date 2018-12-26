@@ -220,6 +220,18 @@ https://yinm.info/20181008/
 ▼今の時代必ず知っておくべき！！Twitterツイートボタンの設置・実装方法まとめ
 http://blog.yuhiisk.com/archive/2015/10/12/twitter-share.html
 
+https://twitter.com/share?text=時間割メーカー。簡単に1日のスケジュールを立てられるサービスです。朝に使うとより幸せになれます。&hashtags=時間割メーカー&url=https://mitsudaman.github.io/TSMaker/"
+
+* 初期表示時に起こるエラー
+The client-side rendered virtual DOM 〜 
+の対策
+→<no-ssr>で囲むことで対応
+
+▼Nuxt.jsで静的サイト開発時のSNSボタンの実装
+https://miobiki.com/nuxt-sns-component/
+
+* はてブ
+
 
 * タグ作成
 →名前だけ決めてあげれば無問題
@@ -231,8 +243,6 @@ http://blog.yuhiisk.com/archive/2015/10/12/twitter-share.html
 * ソースコード汚い問題
 
 * ヘッダー作成
-* はてブ
-
 *左外側のラベルが消えてしまう問題
 →タイトルを設定すれば回避できることに気づいた
 →そもそもpaddingも設定できることが判明
@@ -258,10 +268,15 @@ https://ferret-plus.com/610
 
 
 * DS_store 邪魔問題
+→ 一旦手動で削除 
+
 * READ.ME 私を読んでもうて　かく *front配下のは削除
+→ 書いた
 
 *view port 系
 *[Vue warn]: The client-side rendered virtual DOM tree is not matching server-rendered content.
 
 
 * google analytics設定
+
+

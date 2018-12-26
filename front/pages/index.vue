@@ -129,6 +129,43 @@
       </div>
     </b-container>
     <footer class="text-center mt-5 mt-lg-4 px-5">
+      <div class="px-3">
+        <no-ssr>
+          <a
+            data-size="large"
+            href="https://twitter.com/share?text=時間割メーカー。簡単に1日のスケジュールを立てられるサービスです。朝に使うとより幸せになれます。&hashtags=時間割メーカー&url=https://mitsudaman.github.io/TSMaker/"
+            title="Twitter"
+            class="twitter-share-button"
+            data-show-count="false"
+          >Tweet</a>
+          <script 
+            async 
+            src="https://platform.twitter.com/widgets.js" 
+            charset="utf-8"/>
+          <a
+            href="http://b.hatena.ne.jp/entry/s/mitsudaman.github.io/vue-trial/TimeSchedule/"
+            class="hatena-bookmark-button"
+            data-hatena-bookmark-layout="basic-label"
+            data-hatena-bookmark-lang="ja"
+            data-hatena-bookmark-height="28"
+            title="このエントリーをはてなブックマークに追加"
+          >
+            <img
+              src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+              alt="このエントリーをはてなブックマークに追加"
+              width="20"
+              height="20"
+              style="border: none;"
+            >
+          </a>
+          <script
+            type="text/javascript"
+            src="https://b.st-hatena.com/js/bookmark_button.js"
+            charset="utf-8"
+            async="async"
+          />
+        </no-ssr>
+      </div>
 
       <div>
         開発・運営
