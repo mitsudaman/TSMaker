@@ -26,7 +26,7 @@ module.exports = {
       prefix: 'og: http://ogp.me/ns#'
     },
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/TSMaker/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'https://mitsudaman.github.io/TSMaker/favicon.ico' }
     ]
   },
   /*
