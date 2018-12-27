@@ -15,12 +15,12 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' },
       { property: 'og:title', content: '時間割メーカー' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:description', content: '予定を立てて時間割を作ろう！' },
+      { property: 'og:description', content: '時間割メーカー。簡単に1日のスケジュールを立てられるサービスです。朝に使うとより幸せになれます。' },
       { property: 'og:url', content: 'https://mitsudaman.github.io/TSMaker/' },
       { property: 'og:site_name', content: '時間割メーカー' },
       { property: 'og:image', content: 'https://mitsudaman.github.io/TSMaker/OGP.png' },
-      { property: 'twitter:site', content: '@mitudama' },
-      { property: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@mitudama' },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
@@ -59,6 +59,10 @@ module.exports = {
 
     // Or if you have custom bootstrap CSS...
     ['bootstrap-vue/nuxt', { css: false }],
+    // google analytics 
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-131448037-1'
+    }]
   ],
 }
 
