@@ -2,7 +2,7 @@
 $ git clone https://github.com/mitsudaman/TSMaker.git
 
 # docker 
-$ cd docker
+$ cd TSMaker
 
 $ docker-compose up -d
 

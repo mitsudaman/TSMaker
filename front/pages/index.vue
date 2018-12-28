@@ -1,5 +1,17 @@
 <template>
   <div>
+                 <div class="form__field">
+                    <div class="form__label">
+                      <strong>Please choose a color:</strong>
+                    </div>
+                    <div class="form__input">
+                      <swatches 
+                      v-model="color" 
+                      :colors="colors" 
+                      row-length="6" 
+                      popover-to="left"></swatches>
+                    </div>
+                  </div>
     <header class="mt-3">
       <b-container class="pl-lg-5 pl-3">
         <div class="h1 p-2">
@@ -13,9 +25,9 @@
           <b-col lg="7">
             <b-row>
               <b-col cols="12">
-                <pie-chart 
+                <!-- <pie-chart 
                   :chart-data="datacollection" 
-                  :options="chartOptions"/>
+                  :options="chartOptions"/> -->
               </b-col>
             </b-row>
             <b-row>
@@ -53,16 +65,21 @@
               </b-col>
             </b-row>
             <b-row
-              v-for="(schedule,index) in schedules"
+              v-for="(schedule) in schedules"
               :key="schedule.id"
               class="no-gutters"
             >
               <b-col cols="1">
-                <b-button
+                <!-- <b-button
                   :style="{ backgroundColor: baseColors[schedule.colorNo] }"
                   id="colorBox"
                   @click="onChangeColor(index)"
-                />
+                /> -->
+                <swatches 
+                  v-model="color" 
+                  :colors="colors" 
+                  row-length="6" 
+                  popover-to="left"></swatches>
               </b-col>
               <b-col 
                 cols="2" 
@@ -186,13 +203,21 @@
 <script>
 import PieChart from "./PieChart.js";
 import "chartjs-plugin-labels";
+import Swatches from 'vue-swatches';
+// import "vue-swatches/dist/vue-swatches.min.css"
 
 export default {
   components: {
-    PieChart
+    PieChart,
+    Swatches
   },
   data() {
     return {
+      color: '#b9f5f1',
+      colors: [
+        ["#ff7675","#fd79a8","#fdcb6e","#ffeaa7","#00b894"],
+        ["#55efc4","#0984e3","#74b9ff","#a29bfe","#b2bec3"]
+      ],
       activeColor: "black",
       datacollection: null,
       chartOptions: {
