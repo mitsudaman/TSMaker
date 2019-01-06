@@ -278,5 +278,11 @@ https://ferret-plus.com/610
 
 
 * google analytics設定
+→
+▼公式
+https://github.com/nuxt-community/analytics-module
+
+▼Nuxt.jsで超絶簡単にGoogle Analyticsを導入する
+https://qiita.com/taroodr/items/2d1c92bafb3d77404517
 
 
